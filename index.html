@@ -2103,6 +2103,18 @@
       padding-right: 36px;
     }
 
+    input[type="date"] {
+      cursor: pointer;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(1.2);
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
     .form-textarea {
       min-height: 100px;
       resize: vertical;
@@ -2111,31 +2123,36 @@
 
     .time-select-group {
       display: flex;
-      gap: 8px;
+      gap: 12px;
       align-items: center;
     }
 
     .time-select-group .form-select {
       flex: 1;
       min-width: 0;
+      font-size: 13px;
+      font-weight: 600;
     }
 
     .time-select-group .form-select:first-child {
-      flex: 1;
+      flex: 1.2;
+      min-width: 80px;
     }
 
     .time-select-group .form-select:nth-child(3) {
-      flex: 1;
+      flex: 0.9;
+      min-width: 70px;
     }
 
     .time-select-group .form-select:last-child {
-      flex: 0.8;
+      flex: 0.9;
+      min-width: 70px;
     }
 
     .time-separator {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-dark);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-blue);
       flex-shrink: 0;
     }
 
@@ -2297,19 +2314,20 @@
     .success-heading {
       font-size: 28px;
       font-weight: 800;
-      color: var(--text-dark);
+      color: #FFD700;
       margin-bottom: 16px;
       letter-spacing: -0.3px;
     }
 
     .success-message {
       font-size: 15px;
-      color: var(--text-muted);
+      color: #FFD700;
       line-height: 1.7;
       margin-bottom: 36px;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 500;
     }
 
     .success-details {
@@ -2336,12 +2354,15 @@
     }
 
     .detail-label {
-      font-weight: 600;
-      color: var(--text-dark);
+      font-weight: 700;
+      color: #000000;
+      font-size: 12px;
     }
 
     .detail-value {
-      color: var(--text-muted);
+      color: #1a5e3d;
+      font-weight: 600;
+      font-size: 12px;
     }
 
     .assistance-section {
@@ -3586,9 +3607,11 @@
                     <select class="form-select" id="apptTimeMinute">
                       <option value="">MM</option>
                       <option value="00">00</option>
-                      <option value="15">15</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
                       <option value="30">30</option>
-                      <option value="45">45</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
                     </select>
                     <select class="form-select" id="apptTimePeriod">
                       <option value="">AM/PM</option>

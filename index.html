@@ -1067,16 +1067,18 @@
     .form-wrapper .section-title {
       font-size: 15px;
       font-weight: 700;
-      color: var(--text-dark);
+      color: var(--white);
       margin-bottom: 4px;
       font-family: "Noto Sans Tamil", sans-serif;
     }
 
     .form-wrapper .section-desc {
-      font-size: 11px;
-      color: var(--text-muted);
+      font-size: 13px;
+      color: var(--white);
       margin-bottom: 14px;
       font-family: "Noto Sans Tamil", sans-serif;
+      font-weight: 600;
+      line-height: 1.5;
     }
 
     .form-wrapper .members-grid {
@@ -1097,8 +1099,8 @@
       gap: 10px;
       align-items: center;
       padding: 12px;
-      background: var(--light-grey);
-      border: 1.5px solid #e5e7eb;
+      background: rgba(8, 26, 18, 0.8);
+      border: 1.5px solid rgba(212, 175, 55, 0.3);
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s;
@@ -1111,7 +1113,6 @@
 
     .form-wrapper .member-row.active {
       border-color: var(--accent-blue);
-      background: rgba(212, 175, 55, 0.08);
     }
 
     .form-wrapper .member-row input[type="checkbox"] {
@@ -1124,15 +1125,15 @@
     .form-wrapper .member-label {
       font-size: 11px;
       font-weight: 600;
-      color: var(--text-dark);
+      color: var(--white);
       font-family: "Noto Sans Tamil", sans-serif;
       cursor: pointer;
     }
 
     .form-wrapper .member-age {
       width: 60px;
-      background: rgba(8, 26, 18, 0.8);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: var(--light-grey);
+      border: 1px solid #e5e7eb;
       border-radius: 6px;
       padding: 7px;
       font-size: 11px;
@@ -1141,7 +1142,13 @@
       display: none;
       cursor: text;
       inputmode: numeric;
-      color: var(--white);
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .form-wrapper .member-age::placeholder {
+      color: #333333;
+      opacity: 1;
     }
 
     .form-wrapper .member-age:focus {
@@ -1191,7 +1198,7 @@
     .form-wrapper .children-label {
       font-size: 11px;
       font-weight: 700;
-      color: var(--text-dark);
+      color: var(--white);
       font-family: "Noto Sans Tamil", sans-serif;
       cursor: pointer;
     }
@@ -1224,8 +1231,8 @@
     }
 
     .form-wrapper .child-age {
-      background: rgba(8, 26, 18, 0.8);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: var(--light-grey);
+      border: 1px solid #e5e7eb;
       border-radius: 6px;
       padding: 6px 7px;
       font-size: 11px;
@@ -1235,7 +1242,13 @@
       cursor: text;
       width: 50px;
       flex-shrink: 0;
-      color: var(--white);
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .form-wrapper .child-age::placeholder {
+      color: #333333;
+      opacity: 1;
     }
 
     .form-wrapper .child-age:focus {
@@ -1307,6 +1320,7 @@
       font-size: 11px;
       cursor: pointer;
       font-family: "Noto Sans Tamil", sans-serif;
+      color: var(--white);
     }
 
     .form-wrapper .medical-options {
@@ -1323,14 +1337,16 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 12px;
+      padding: 12px 14px;
       background: var(--light-grey);
       border: 1.5px solid #e5e7eb;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s;
-      font-size: 11px;
+      font-size: 13px;
       font-family: "Noto Sans Tamil", sans-serif;
+      color: #000000;
+      font-weight: 700;
     }
 
     .form-wrapper .medical-chip:hover {
@@ -1339,7 +1355,10 @@
 
     .form-wrapper .medical-chip.active {
       border-color: var(--accent-blue);
-      background: rgba(212, 175, 55, 0.08);
+      background: rgba(212, 175, 55, 0.15);
+      color: #000000;
+      font-weight: 800;
+      font-size: 14px;
     }
 
     .form-wrapper .medical-chip input {
@@ -1370,7 +1389,7 @@
     .form-wrapper .field-label {
       font-size: 10px;
       font-weight: 700;
-      color: var(--text-dark);
+      color: var(--white);
       text-transform: uppercase;
       letter-spacing: 0.4px;
       margin-bottom: 4px;
@@ -1395,7 +1414,8 @@
     }
 
     .form-wrapper .form-input::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--white);
+      opacity: 0.8;
     }
 
     .form-wrapper .form-input:focus {
@@ -2062,7 +2082,8 @@
 
     .form-input::placeholder,
     .form-textarea::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--white);
+      opacity: 0.8;
     }
 
     .form-input:focus,
@@ -2229,7 +2250,7 @@
     }
 
     .appointment-button:disabled {
-      opacity: 0.6;
+      opacity: 0.7;
       cursor: not-allowed;
     }
 
